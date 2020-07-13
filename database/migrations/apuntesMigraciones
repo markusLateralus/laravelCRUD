@@ -1,0 +1,11 @@
+
+Migración: control de versión para las bases de datos7
+se usa para crear y modificar tablas facilmente
+Nombre de la migración: debe ayudar a especificar que funcion realiza
+						createTabla, updateTabla...
+Ejecutar migracion: php artisan migrate
+eliminar todas: php artisan migrate:rollback
+eliminar la última migracion:  php artisan migrate:rollback --step=1
+actualizar campos o tablas cuando han sido modificadas:  php artisan migrate:fresh   PERO BORRA TODOS LOS DATOS
+otra forma: creando nuevas migraciones
+ php artisan  make:migration  Alter_TablaMigracion

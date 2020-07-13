@@ -1,0 +1,29 @@
+en consola: 
+composer require laravel/ui --dev
+php artisan migrate
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+-----------------------
+
+con esta instruccion se nos genera 5 rutas nuevas:
+get /login=>para mostrar el formulario login
+post /login=>donde se envia el formulario del login
+post /logout=> para cerrar session
+get /register=> para mostrar el formulario de registro
+post /register=> donde se envia el formulario de registro
+---------------------------------------------------------------------
+estas rutas están predefinidas hacia unos controladores ya creados :LoginController RegisterController, están dentro del fichero Auth
+------------
+también nos crea nuevas vistas dentro de auth/:
+login.blade.php
+register.blade.php
+y otras...
+y dentro de layout/:
+app.blade.php
+-----------------------------------
+tambien nos crea :
+vista: home.blade.php
+Controlador: HomeController.php
+Ruta: /home
+----------------------------------------

@@ -1,0 +1,1 @@
+crear modelo: php artisan make:model Nombre -m 

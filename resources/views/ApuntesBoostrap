@@ -1,0 +1,7 @@
+primero actualizar el bootstrap
+consola:
+yarn remove bootstrap
+yarn add bootstrap --dev
+-------------actualizado---------------
+primero nav
+<nav class="navbar bg-white shadow-sm">

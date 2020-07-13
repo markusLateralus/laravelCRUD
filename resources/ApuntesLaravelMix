@@ -1,0 +1,23 @@
+para utilizar los ficheros css y js:
+dentro de la carpeta resource/  se crean los css o js necesarios
+despues debemos usar laravel MIX: proporciona una API fluida para definir los pasos de compilacion de webpack de la aplicacion, utilizando varios procesadores css y js.
+en el fichero webpack.mix.js se configura css(sass, less, stylus)
+en consola:
+instalar node : www.nodejs.org
+ver la version: node -v   
+dos formas de empezar a compilar:
+ npm -v 
+ o instalar yarn con  npm install --global yarn y luego  escribir yarn
+ se genera una carpeta llamada node_modules y dentro se almacenan las dependencias
+ ahora se compilan los archivos con:  npm run dev    o   yarn dev
+ Y YA ESTAN LOS CSS Y JS FUNCIONANDO
+-----------------------------------------------------------------
+A partir de ahora, cada vez que se modifique un css o js nos vamos a la consola y escribimos una única vez:
+npm run watch      o    yarn wath
+y de este modo se actualiza automaticamente los ficheros, ya no volvemos a usar el comando  yarn dev
+--------------------------------------------------------------
+para actulizar de forma automatica la web, nos vamos al fichero webpack.mix.js y añadimos
+mix.browserSync("http://nombreProyecto.test/");
+en consola: yarn watch
+esperamos a que instale browserSync, y despues escribimos: yarn watch
+y apartir de ahora la url será: localhost:3000

@@ -1,0 +1,18 @@
+para crear un fichero con una funcion y luego usarla en la vista, debemos ir al
+fichero composer.json y hacer la siguiente modificacion:
+buscamos el sigueinte codigo:
+   "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+                
+        },
+        "files":["app/helpers.php"],   <------AKI AÑADIMOS EL DIRECTORIO Y EL NOMBRE DEL FICHERO
+        
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+        
+    },
+
+    despues debemos usar la terminar para actualizar el composer con el siguiente comando: composer dumpautoload

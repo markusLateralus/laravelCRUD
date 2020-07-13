@@ -1,0 +1,11 @@
+estas son las 7 rutas para hacer un crud
+Route::get("/portfolio","ProjectController@index" )->name("project.index");
+Route::get("/portfolio/crear","ProjectController@create")->name("project.create"); //EL ORDEN DE LAS RUTAS SON IMPORTANTES..PRIMERO LOS CREAR Y DEBAJO LOS DE BUSCAR ELEMENTOS
+Route::post("/portfolio","ProjectController@store")->name("project.store");
+Route::patch("/portfolio/{project}","ProjectController@update")->name("project.update");
+Route::get("/portfolio/{project}","ProjectController@show")->name("project.show");
+Route::get("/portfolio/{project}/editar","ProjectController@edit")->name("project.edit");
+Route::delete("/portfolio/{project}","ProjectController@destroy")->name("project.destroy");
+-------------------------
+-----------ahora vamos a simplificarlo mediante route resource
+Route::resource("project", "ProjectController")->names("project")

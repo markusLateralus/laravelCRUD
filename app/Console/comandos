@@ -1,0 +1,11 @@
+comandos
+
+1.php artisan   
+ nos da una lista de todos los comandos para crear 
+
+ 2. php artisan route:list
+ ver todos las rutas del proyecto
+
+ 3. php artisan make:controller HomeController  "-m -i, -r"
+ crea un controlador 
+ usamos la opcion -h para mostrar todas lsa opciones: php artisan make:controller HomeController -h

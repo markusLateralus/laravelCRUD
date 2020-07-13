@@ -1,0 +1,10 @@
+Form Request Validaton
+pensado para validar formularios mas complejos
+son clases dedicadas para encapsular la logica de validacion y autorizacion
+de un formulario
+
+1.primero crearlo en la terminal    php artisan make:request CreateModeloRequest
+se almacena en app/http/request
+el fichero tiene dos métodos
+autorize():controla que el usuario que rellena el formulario está autorizado
+rules(): verifica las reglas de validacion

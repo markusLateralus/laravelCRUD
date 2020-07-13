@@ -1,0 +1,22 @@
+Apuntes
+recorrer una lista 
+<ul>
+	@isset($personas)
+   @if($personas)
+	@foreach ($personas as $registro ) 
+		<li> {{$registro["nombre"]}} <pre {{$loop->last? "es el ultimo"}}</pre> </li>
+	@endforeach
+	@else
+	<li> la lista está vacia </li>
+	@endif
+	@else
+	<li> la lista no existe </li>
+	@endisset
+</ul>
+---------------------------------------------------------------------------
+@extends('')-> para que una vista nueva herede de una ya creada
+@yield('content')->contenido exclusivo de cada pagina.Primero se declara en un layout y despues se usa utilizando @section('content') y cerrarlo con @endsection.
+@foreah  @endforeach
+
+@auth @endauth-> dentro se escribe todo lo que quiera que se muestre a un usuario autenticado
+@guest @endguest->todo lo de dentro se ejecuta si NO se ha iniciado sesion (invitado)

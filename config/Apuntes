@@ -1,0 +1,8 @@
+
+como crear un archivo de configuracion para idioma español:
+dentro de config abrimos el fichero app
+buscamos:      'locale'=>'en',        'fallback_locale' => 'en'
+lo cambiamos a español:  'locale'=>'es',        'fallback_locale' => 'es'
+
+nos vamos a resources/lang y creamos una carpeta con el nombre es
+esta carpeta debe contener 4 ficheros con los idiomas. Nos vamos a gogle buscamos laravel lang y pinchamos en caouecs, laravel/src/lang/es y nos los descargamos

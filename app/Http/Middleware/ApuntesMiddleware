@@ -1,0 +1,10 @@
+middleware
+se utilizan para hacer un control de acceso a las paginas, dandole o quitando acceso a los
+usuarios que esten autenticados
+de este modo un usuario autenticado le daré más acceso a la pagina que un usuario no autenticado
+la pagina de contacto no se filtra ningun tipo de middelware, pero la pagina de proyecto solo los que estan autenticado podran crear, editar y eliminar algun proyecto
+
+dentro de app/http/kermel.php  en la parte de abajo encontramos una lista con los middleware creados por laravel
+para usarlo, dentro de los contructures de los controladores añadiremos un codigo como este:
+  $this->middleware('auth')->except('index');//no tiene acceso excepto..index
+  $this->middleware('auth')->only('create','edit','destroy'); //tiene acceso a todo menos..c,e,d

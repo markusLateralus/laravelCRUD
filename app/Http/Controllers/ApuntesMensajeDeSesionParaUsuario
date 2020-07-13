@@ -1,0 +1,13 @@
+MENSAJES FLASH
+vamos a mandar mensajes al usuario cada vez que haga algo relacionado con el crud, y cuando se actualice la pagina desaparezcan
+Sesion: es un almacenamiento temporal para guardar datos del usuario que esté dentro de la pagina
+se almacenaran en un fichero
+para configurar donde se almacena ir a : config/session y cambiar la opcion de DRIVER=>
+los ficheros se almacenan en : storage/framework/sessions
+para implementarlo:
+en el controlador retornamos:  return back()->with("estado","mensaje que queramos");
+en la vista preguntamos si existe mensaje de estado:
+@if(session("estado")){
+	{{session("estado")}}
+}
+@endif
